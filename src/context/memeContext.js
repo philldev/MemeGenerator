@@ -15,7 +15,7 @@ export const MemeProvider = ({ children }) => {
   useEffect(() => {
     const localState = JSON.parse(localStorage.getItem("imgflip"));
     
-    if (localState) {
+    if (localState.length > 0) {
       setState(localState);
     } else {
       fetchMemes(setState);
