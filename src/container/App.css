@@ -2,12 +2,31 @@
   padding: 15px 100px;
 }
 
+.edit_meme {
+  position: fixed;
+  background-color: aqua;
+  min-width: 200px;
+  padding: 50px 50px;
+  top: 0;
+  bottom: 0;
+  z-index: 1400;
+}
+
+.meme_template {
+  text-align: center;
+}
+
+.edit_meme img {
+
+  max-height: 50vh;
+}
+
 .fade_in {
-  animation: fadeIn ease .7s;
-  -webkit-animation: fadeIn ease .7s;
-  -moz-animation: fadeIn ease .7s;
-  -o-animation: fadeIn ease .7s;
-  -ms-animation: fadeIn ease .7s;
+  animation: fadeIn ease 0.7s;
+  -webkit-animation: fadeIn ease 0.7s;
+  -moz-animation: fadeIn ease 0.7s;
+  -o-animation: fadeIn ease 0.7s;
+  -ms-animation: fadeIn ease 0.7s;
 }
 @keyframes fadeIn {
   0% {
