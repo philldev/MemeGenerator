@@ -10,7 +10,7 @@ export default function Search() {
 
   return (
     <>
-      <Input color='black'  size='sm' onChange={handleInput}/>  
+      <Input marginRight='1rem' width='auto' display='block' placeholder='Search meme template' color='black'  size='sm' onChange={handleInput}/>  
     </>
   )
 }

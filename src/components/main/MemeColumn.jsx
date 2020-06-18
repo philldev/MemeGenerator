@@ -5,6 +5,7 @@ import MemeBox from "./MemeBox";
 export default function MemeColumn({ memes, idx }) {
   return (
     <Box
+    
       flexBasis={0}
       flexGrow={1}
       flexShrink={1}

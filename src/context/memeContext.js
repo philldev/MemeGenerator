@@ -17,9 +17,6 @@ export const MemeProvider = ({ children }) => {
   const [selectedMeme, setSelectedMeme] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  // input text from modal
-  const [text, setText] = useState(null);
-
   // posted memes
   const [postedMeme, setPostedMeme] = useState(null);
 
@@ -34,7 +31,7 @@ export const MemeProvider = ({ children }) => {
   useEffect(() => {
     const localState = JSON.parse(localStorage.getItem("imgflip"));
 
-    if (localState.length > 0) {
+    if (!localState) {
       setState(localState);
     } else {
       fetchMemes(setState);
@@ -55,8 +52,6 @@ export const MemeProvider = ({ children }) => {
     selectedMeme,
     isOpen,
     setIsOpen,
-    text,
-    setText,
     postedMeme,
     setPostedMeme,
   };

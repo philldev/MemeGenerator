@@ -1,18 +1,28 @@
-import React, { useContext } from "react";
-import { FormControl, FormLabel, Input } from "@chakra-ui/core";
-import { MemeContext } from "../../context/memeContext";
+import { FormControl, FormHelperText, FormLabel, Input } from "@chakra-ui/core";
+import React from "react";
 
-export default function ModalInput ({idx}) {
-  const {text, setText} = useContext(MemeContext)
-
-  const handleText = e => {
-    setText({...text, [e.target.name] : e.target.value})
-  }
+export default function ModalInput({ idx, register }) {
+  
+  React.useEffect(() => {
+    
+  })
 
   return (
-    <FormControl textAlign='left' marginTop='20px'>
-      <FormLabel htmlFor="text">Text{`${idx + 1}`}</FormLabel>
-      <Input onChange={handleText} name={`text${idx}`} type="text" id="text" />
+    <FormControl textAlign="left" marginTop="20px">
+      <FormLabel htmlFor={`text${idx}`}>Text{`${idx + 1}`}</FormLabel>
+      <Input
+        ref={register}
+        color="gray.700"
+        name={`text${idx}`}
+        type="text"
+        id={`text${idx}`}
+        maxLength='40'
+        isRequired={true}
+      />
+      <FormHelperText textAlign='right'>
+        max characters : 40
+      </FormHelperText>
+      
     </FormControl>
   );
 }
