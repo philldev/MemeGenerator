@@ -1,29 +1,25 @@
-import { Box, Button, Heading } from "@chakra-ui/core";
-import React, { useContext } from "react";
+import { Box, Button, Heading, Link } from "@chakra-ui/core";
+import React from "react";
 import { useForm } from "react-hook-form";
-import { MemeContext } from "../../context/memeContext";
 import ModalInput from "./ModalInput";
-import postMemes from "../../utils/postMemes";
+import { Link as ReachLink } from "react-router-dom";
 
-export default function ModalForm({ handleClickOutside, setLoading, setError }) {
-  const { selectedMeme, setPostedMeme } = useContext(MemeContext);
+export default function ModalForm({ selectedMeme }) {
   const { register, handleSubmit, errors } = useForm();
   const boxesArr = new Array(selectedMeme.box_count).fill(0);
-  
-  
 
   const onSubmit = (values, e) => {
     const valuesKeys = Object.keys(values);
 
     if (valuesKeys.length === selectedMeme.box_count) {
-      setLoading(true)
+      // setLoading(true)
       e.target.reset();
-      console.log("hey");
-      postMemes(selectedMeme, values, setPostedMeme, setError, setLoading);
+      console.log("success");
+      // postMemes(selectedMeme, values, setPostedMeme, setError, setLoading);
     } else {
       e.target.reset();
       console.log("error");
-      setError('Somethings wrong with the text')
+      // setError('Somethings wrong with the text')
     }
   };
 
@@ -50,20 +46,24 @@ export default function ModalForm({ handleClickOutside, setLoading, setError }) 
         display="inline-block"
         marginTop="20px"
         type="submit"
+        float='left'
       >
         Submit
       </Button>
-      <Button
-        color="#fff"
-        bg="transparent"
-        _hover={{ bg: "blue.600" }}
-        display="inline-block"
-        marginTop="20px"
-        type="submit"
-        onClick={handleClickOutside}
-      >
-        go back
-      </Button>
+
+      <Link as={ReachLink} to="/">
+        {" "}
+        <Button
+          color="#fff"
+          bg="transparent"
+          _hover={{ bg: "blue.600" }}
+          display="inline-block"
+          marginTop="20px"
+          float='right'
+        >
+          go back
+        </Button>{" "}
+      </Link>
     </Box>
   );
 }

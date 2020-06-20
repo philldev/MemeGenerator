@@ -23,5 +23,5 @@ export default  function useOnScreen (options) {
     }
   }, [ref, options])
 
-  return [setRef, visible]
+  return [setRef, visible, ref]
 }

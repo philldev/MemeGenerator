@@ -1,13 +1,12 @@
 import { CSSReset, ThemeProvider } from "@chakra-ui/core";
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "../components/header/Header";
 import Nav from "../components/header/Nav";
 import Main from "../components/main/Main";
+import MemeTemplate from "../components/main/MemeTemplate";
 import { MemeProvider } from "../context/memeContext";
 import "./App.css";
-import MemeModalContainer from "./MemeModalContainer";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Dashboard from "../components/dashboard/Dashboard";
 
 function App() {
   return (
@@ -16,15 +15,21 @@ function App() {
       <MemeProvider>
         <Router>
           <Nav />
-          <MemeModalContainer />
           <Switch>
-            <Route path="/" exact>
-              <Header />
-              <Main />
-            </Route>
-            <Route  path='/user' exact>
-              <Dashboard />
-            </Route>
+            <Route
+              path="/"
+              exact
+              render={() => (
+                <>
+                  <Header />
+                  <Main />{" "}
+                </>
+              )}
+            />
+            <Route path='/meme/:id' render={() => <MemeTemplate />} />
+            {/* // <Route path="/user" exact>
+            //   <Dashboard />
+            // </Route> */}
           </Switch>
         </Router>
       </MemeProvider>
