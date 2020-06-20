@@ -6,17 +6,27 @@ import Main from "../components/main/Main";
 import { MemeProvider } from "../context/memeContext";
 import "./App.css";
 import MemeModalContainer from "./MemeModalContainer";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Dashboard from "../components/dashboard/Dashboard";
 
 function App() {
   return (
     <ThemeProvider>
       <CSSReset />
       <MemeProvider>
-        <Nav />
-        <Header />
-        <MemeModalContainer />
-        <Main />
+        <Router>
+          <Nav />
+          <MemeModalContainer />
+          <Switch>
+            <Route path="/" exact>
+              <Header />
+              <Main />
+            </Route>
+            <Route  path='/user' exact>
+              <Dashboard />
+            </Route>
+          </Switch>
+        </Router>
       </MemeProvider>
     </ThemeProvider>
   );

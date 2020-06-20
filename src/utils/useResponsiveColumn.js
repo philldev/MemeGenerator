@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function useResponsiveColumn() {
-  const [num, setNum] = useState(null);
+  const [num, setNum] = useState(3);
 
   useEffect(() => {
     const handleResize = () => {

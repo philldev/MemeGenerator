@@ -6,7 +6,7 @@ import ModalForm from "./ModalForm";
 import ModalImage from "./ModalImage";
 
 export default function MemeModal() {
-  const { setIsOpen, isOpen, selectedMeme, postedMeme, setPostedMeme } = useContext(
+  const { setIsOpen, isOpen,  setPostedMeme } = useContext(
     MemeContext
   );
 
@@ -25,7 +25,7 @@ export default function MemeModal() {
       {isOpen ? (
         <>
           {" "}
-          <ModalOverlay bg="#1A365D" />
+          <ModalOverlay bg="#2D3748" />
           <Box
             zIndex="1400"
             position="fixed"
@@ -42,8 +42,6 @@ export default function MemeModal() {
           </Alert>}
             <Flex color="#fff">
               <ModalImage
-                selectedMeme={selectedMeme}
-                postedMeme={postedMeme}
                 loading={loading}
               />
               <ModalForm

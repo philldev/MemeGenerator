@@ -30,7 +30,6 @@ export default function MemeBox({ meme }) {
       transition='all .2s ease-out'
       
     >
-      <Text className='meme_title' position='absolute' left='10px' display='none' bottom='20px' marginX='auto'>{meme.name}</Text>
       <Image
         className={visible ? "fade_in meme_box" : null}
         opacity={loading ? 1 : 0}
@@ -42,6 +41,7 @@ export default function MemeBox({ meme }) {
         alt={meme.name}
         boxShadow='5px 5px #1A202C'
       />
+      <Text className='meme_title' position='absolute' left='10px' bottom='20px' marginX='auto'>{meme.name}</Text>
     </Flex>
   );
 }
