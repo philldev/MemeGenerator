@@ -3,7 +3,8 @@ import MemeColumn from './MemeColumn'
 
 export default function ColumnContainer({chunkMemes}) {
 
-  console.log('rendering')
+  // console.log('rendering')
+  
   return (
     <>
 

@@ -6,6 +6,7 @@ import spliceMemes from "../../utils/spliceMemes";
 
 export default function SavedMemes() {
   const { savedMemes} = useContext(MemeContext)
+  console.log(savedMemes)
   const chunkMemes = spliceMemes(savedMemes, 2);
   return (
     <Box width="75%" display="flex">

@@ -12,7 +12,10 @@ export default function MemeBox({ meme }) {
   };
 
   return (
-    <Link to={`meme/${meme.id}`} as={ReachLink}>
+    <Link
+      to={meme.isSavedMeme ? `meme/${meme._id}` : `meme/${meme.id}`}
+      as={ReachLink}
+    >
       <Flex
         position="relative"
         direction="column"

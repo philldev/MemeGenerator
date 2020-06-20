@@ -1,10 +1,8 @@
-import { Box, Heading, Image } from "@chakra-ui/core";
+import { Box, Heading, Image, Link, Button } from "@chakra-ui/core";
 import React from "react";
 
-export default function ModalImage({selectedMeme}) {
-
-  console.log('render from modal image')
-
+export default function ModalImage({ selectedMeme, postedMeme, handleSaveMeme }) {
+  // console.log('render from modal image')
   return (
     <Box
       padding="2rem 1rem"
@@ -19,11 +17,19 @@ export default function ModalImage({selectedMeme}) {
       <Heading marginBottom="1rem">{selectedMeme.name}</Heading>
       <Image
         className="meme"
-        maxH="40vh"
+        maxH="70vh"
         marginX="auto"
-        src={selectedMeme.url}
+        src={postedMeme ? postedMeme : selectedMeme.url}
         alt={selectedMeme.name}
       />
+      {postedMeme ? (
+        <>
+          {" "}
+          <Link download href={postedMeme} > Download Meme </Link>
+          <Button backgroundColor='blue.500' _hover={{backgroundColor:'blue.600'}} onClick={handleSaveMeme}>Save to Favourites</Button>
+          {" "}
+        </>
+      ) : null}
     </Box>
   );
 }

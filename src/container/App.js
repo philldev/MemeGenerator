@@ -6,6 +6,7 @@ import Nav from "../components/header/Nav";
 import Main from "../components/main/Main";
 import MemeTemplate from "../components/main/MemeTemplate";
 import { MemeProvider } from "../context/memeContext";
+import Dashboard from '../components/dashboard/Dashboard'
 import "./App.css";
 
 function App() {
@@ -26,11 +27,10 @@ function App() {
                 </>
               )}
             />
-            <Route path='/meme/:id' render={() => <MemeTemplate />} />
-            {/* // <Route path="/user" exact>
-            //   <Dashboard />
-            // </Route> */}
+            <Route exact path="/meme/:id" render={() => <MemeTemplate />} />
+            <Route exact path="/user" render={() => <Dashboard /> } />
           </Switch>
+          
         </Router>
       </MemeProvider>
     </ThemeProvider>

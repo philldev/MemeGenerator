@@ -9,7 +9,8 @@ export default function RandomButton() {
  
     const randomMeme = memes[Math.floor(Math.random() * 100 + 1)] || {};
 
-  console.log(randomMeme);
+  // console.log(randomMeme);
+
   return (
     <Link to={`meme/${randomMeme.id}`} as={ReachLink}>
       <Button bg="blue.700" _hover={{ bg: "blue.800" }} padding="10px 14px">

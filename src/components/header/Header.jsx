@@ -14,7 +14,6 @@ export default function Header() {
       maxH="500px"
       minH="350px"
       as="header"
-      className="container"
     >
       <Box marginTop="50px" textAlign="center">
         <Heading fontSize="48px" marginBottom="2rem">

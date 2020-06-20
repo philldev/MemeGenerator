@@ -3,8 +3,9 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import ModalInput from "./ModalInput";
 import { Link as ReachLink } from "react-router-dom";
+import postMemes from "../../utils/postMemes";
 
-export default function ModalForm({ selectedMeme }) {
+export default function ModalForm({ selectedMeme, setPostedMeme }) {
   const { register, handleSubmit, errors } = useForm();
   const boxesArr = new Array(selectedMeme.box_count).fill(0);
 
@@ -15,13 +16,14 @@ export default function ModalForm({ selectedMeme }) {
       // setLoading(true)
       e.target.reset();
       console.log("success");
-      // postMemes(selectedMeme, values, setPostedMeme, setError, setLoading);
+      postMemes(selectedMeme, values, setPostedMeme);
     } else {
       e.target.reset();
       console.log("error");
       // setError('Somethings wrong with the text')
     }
   };
+
 
   return (
     <Box
