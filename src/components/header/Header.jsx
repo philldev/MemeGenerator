@@ -16,9 +16,10 @@ export default function Header() {
       as="header"
     >
       <Box marginTop="50px" textAlign="center">
-        <Heading fontSize="48px" marginBottom="2rem">
+        <Heading fontSize="48px" marginBottom="1rem">
           Make memes, make world peace{" "}
         </Heading>
+        <Text> Pick a template and make a meme!! </Text>
       </Box>
       <RandomButton />
       <Text color="#ACACAC">powered by imgflip.com</Text>

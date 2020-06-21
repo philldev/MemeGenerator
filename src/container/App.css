@@ -3,6 +3,12 @@ body {
   background-color: #2d3748;
 }
 
+a:active, a:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
+
 header {
   padding: 15px 100px;
   background-image: linear-gradient(
@@ -11,6 +17,7 @@ header {
       rgba(6, 24, 51, 0.5)
     ),
     url(https://images.unsplash.com/photo-1521249664898-864e6c1b6d5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+    background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }

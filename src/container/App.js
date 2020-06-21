@@ -1,7 +1,4 @@
-import {
-  CSSReset,
-  ThemeProvider
-} from "@chakra-ui/core";
+import { CSSReset, ThemeProvider } from "@chakra-ui/core";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Dashboard from "../components/dashboard/Dashboard";
@@ -15,13 +12,15 @@ import "./App.css";
 
 function App() {
   return (
+    // Theme provider
     <ThemeProvider>
       <CSSReset />
+      {/* App Provider */}
       <MemeProvider>
         <Router>
           <Nav />
-
           <Switch>
+            {/* Main */}
             <Route
               path="/"
               exact
@@ -36,6 +35,7 @@ function App() {
             <Route exact path="/user" render={() => <Dashboard />} />
           </Switch>
         </Router>
+        {/* error handler */}
         <Error />
       </MemeProvider>
     </ThemeProvider>

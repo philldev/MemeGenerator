@@ -6,10 +6,10 @@ import spliceMemes from "../../utils/spliceMemes";
 
 export default function SavedMemes() {
   const { savedMemes } = useContext(MemeContext);
-  const chunkMemes = spliceMemes(savedMemes, 2);
+  const chunkMemes = spliceMemes(savedMemes, 3);
   
   return (
-    <Box width="75%" display="flex">
+    <Box marginX='auto' width="100%" display="flex" paddingLeft='20px'>
       {chunkMemes && chunkMemes.length > 0
         ? chunkMemes.map((cm, idx) => (
             <MemeColumn idx={idx} key={idx} memes={cm} />

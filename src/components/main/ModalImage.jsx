@@ -13,6 +13,8 @@ export default function ModalImage({ selectedMeme, postedMeme, handleSaveMeme, s
       backgroundColor="#1E4E8C"
       boxShadow="5px 5px #1A202C"
       marginX="1rem"
+      paddingBottom='70px'
+      position='relative'
     >
       <Heading marginBottom="1rem">{selectedMeme.name}</Heading>
       <Image
@@ -23,12 +25,12 @@ export default function ModalImage({ selectedMeme, postedMeme, handleSaveMeme, s
         alt={selectedMeme.name}
       />
       {postedMeme ? (
-        <>
+        <Box position='absolute' bottom='10px'>
           {" "}
-          <Link download href={postedMeme} > Download Meme </Link>
           <FavouriteButton handleSaveMeme={handleSaveMeme} saved={saved}/>
+          <Link marginLeft='25px' download href={postedMeme} > Download Meme </Link>
           {" "}
-        </>
+        </Box>
       ) : null}
     </Box>
   );

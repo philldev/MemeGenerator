@@ -1,23 +1,40 @@
 import React from "react";
-import { Text, Box } from "@chakra-ui/core";
+import { Text, Box, Avatar, Heading } from "@chakra-ui/core";
 
 export default function UserProfile() {
-  
   return (
     <Box
-      width="25%"
-      bg="gray.600"
+    backgroundColor='blue.900'
+    boxShadow="5px 5px #1A202C"
+      width="100%"
       padding="2rem 1rem"
       alignSelf="flex-start"
-      marginRight="20px"
+      marginBottom="2rem"
+      marginTop="2rem"
+      display="flex"
+      mx="auto"
     >
-      <Box>
-        <Text>username :</Text>
-        <Text>user</Text>
+      <Box width="25%">
+        <Avatar
+          display="block"
+          size="2xl"
+          mx='auto'
+          name="Segun Adebayo"
+          src="https://bit.ly/sage-adebayo"
+        />
       </Box>
-      <Box>
-        <Text>email :</Text>
-        <Text>user@user.com</Text>
+
+      <Box color="#fff">
+        <Box>
+          <Heading> Phillip 1997 </Heading>
+        </Box>
+        <Box>
+          <Text> <strong>9</strong>  Memes</Text>
+          <Text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi
+            et atque incidunt. Laborum quo rem minus incidunt eius quod!
+          </Text>
+        </Box>
       </Box>
     </Box>
   );

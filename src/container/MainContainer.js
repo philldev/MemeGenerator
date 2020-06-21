@@ -9,6 +9,7 @@ export default function Main({children}) {
       className='container'
       paddingLeft="15px"
       paddingTop="2rem"
+      maxW='975px'
 
     >
       <Flex justifyContent="center">
