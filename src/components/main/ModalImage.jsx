@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Link, Button } from "@chakra-ui/core";
+import { Box, Heading, Image, Link } from "@chakra-ui/core";
 import React from "react";
 import FavouriteButton from "./FavouriteButton";
 
