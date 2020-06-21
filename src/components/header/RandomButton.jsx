@@ -6,10 +6,7 @@ import { Link as ReachLink } from "react-router-dom";
 export default function RandomButton() {
   const { memes } = useContext(MemeContext);
 
- 
-    const randomMeme = memes[Math.floor(Math.random() * 100 + 1)] || {};
-
-  // console.log(randomMeme);
+  const randomMeme = memes[Math.floor(Math.random() * 100 + 1)] || {};
 
   return (
     <Link to={`meme/${randomMeme.id}`} as={ReachLink}>

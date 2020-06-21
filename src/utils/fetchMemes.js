@@ -13,7 +13,9 @@ export default async function fetchMemes (setState)  {
     setState(data.memes)
 
   } catch (error) {
+
     console.log('something went wrong')
+    
   }
 
 }

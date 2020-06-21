@@ -1,8 +1,8 @@
 import { Box, Heading, Image, Link, Button } from "@chakra-ui/core";
 import React from "react";
+import FavouriteButton from "./FavouriteButton";
 
-export default function ModalImage({ selectedMeme, postedMeme, handleSaveMeme }) {
-  // console.log('render from modal image')
+export default function ModalImage({ selectedMeme, postedMeme, handleSaveMeme, saved }) {
   return (
     <Box
       padding="2rem 1rem"
@@ -26,7 +26,7 @@ export default function ModalImage({ selectedMeme, postedMeme, handleSaveMeme })
         <>
           {" "}
           <Link download href={postedMeme} > Download Meme </Link>
-          <Button backgroundColor='blue.500' _hover={{backgroundColor:'blue.600'}} onClick={handleSaveMeme}>Save to Favourites</Button>
+          <FavouriteButton handleSaveMeme={handleSaveMeme} saved={saved}/>
           {" "}
         </>
       ) : null}

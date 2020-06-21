@@ -16,16 +16,18 @@ export default function MemeTemplate() {
       ? savedMemes.filter((m) => m._id === id)[0]
       : memes.filter((m) => m.id === id)[0];
 
-      // console.log(savedMemes.filter((m) => m._id === id)[0])
-
   const [postedMeme, setPostedMeme] = React.useState(null);
 
+  const [saved, setSaved] = React.useState(null)
+
   const handleSaveMeme = () => {
+    // got from :
     // https://gist.github.com/gordonbrander/2230317
     const _id = "_" + Math.random().toString(36).substr(2, 9);
-    
     const name = selectedMeme.name;
     const url = postedMeme;
+
+    setSaved(true)
 
     const newSavedMeme = {
       _id,
@@ -45,6 +47,7 @@ export default function MemeTemplate() {
             selectedMeme={selectedMeme}
             postedMeme={postedMeme}
             handleSaveMeme={handleSaveMeme}
+            saved={saved}
           />
         )}
 
@@ -52,6 +55,7 @@ export default function MemeTemplate() {
           <ModalForm
             selectedMeme={selectedMeme}
             setPostedMeme={setPostedMeme}
+            setSaved={setSaved}
           />
         )}
       </Flex>

@@ -5,9 +5,9 @@ import { MemeContext } from "../../context/memeContext";
 import spliceMemes from "../../utils/spliceMemes";
 
 export default function SavedMemes() {
-  const { savedMemes} = useContext(MemeContext)
-  console.log(savedMemes)
+  const { savedMemes } = useContext(MemeContext);
   const chunkMemes = spliceMemes(savedMemes, 2);
+  
   return (
     <Box width="75%" display="flex">
       {chunkMemes && chunkMemes.length > 0

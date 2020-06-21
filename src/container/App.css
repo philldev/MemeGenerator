@@ -61,7 +61,26 @@ header {
   opacity: 1;
 }
 
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+
 /* ANIMATIONS */
+
+.slide_up {
+  animation: slideUp ease 0.7s;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 .fade_in {
   animation: fadeIn ease 0.7s;

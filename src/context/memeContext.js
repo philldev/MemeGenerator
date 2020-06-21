@@ -6,11 +6,9 @@ export const MemeContext = createContext();
 
 export const MemeProvider = ({ children }) => {
   const [search, setSearch] = useState("");
-
   const [memes, setMemes] = useState([]);
-
   const [savedMemes, setSavedMemes] = useState([]);
-
+  const [error, setError] = useState(null);
   useLocalStorage(setMemes, fetchMemes, memes, setSavedMemes, savedMemes);
 
   // selected meme state for open modal
@@ -31,6 +29,8 @@ export const MemeProvider = ({ children }) => {
     search,
     savedMemes,
     setSavedMemes,
+    error,
+    setError,
   };
 
   return <MemeContext.Provider value={value}>{children}</MemeContext.Provider>;
