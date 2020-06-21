@@ -1,61 +1,37 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 import fetchMemes from "../utils/fetchMemes";
-
-const initialState = [];
+import useLocalStorage from "../utils/useLocalStorage";
 
 export const MemeContext = createContext();
 
 export const MemeProvider = ({ children }) => {
-  /*************************/
-  // main state
-  const [state, setState] = useState(initialState);
-
-  // search state
   const [search, setSearch] = useState("");
+  const [memes, setMemes] = useState([]);
+  const [savedMemes, setSavedMemes] = useState([]);
+  const [error, setError] = useState(null);
+  useLocalStorage(setMemes, fetchMemes, memes, setSavedMemes, savedMemes);
 
   // selected meme state for open modal
-  const [selectedMeme, setSelectedMeme] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
+  // const [selectedMeme, setSelectedMeme] = useState(null);
+  // const [isOpen, setIsOpen] = useState(false);
 
   // posted memes
-  const [postedMeme, setPostedMeme] = useState(null);
+  // const [postedMeme, setPostedMeme] = useState(null);
 
-  /*************************/
+  //TODO
+  //saved memes states
 
-  //filtered memes from search input
-  const filteredMemes = state.filter((meme) =>
-    meme.name.toLowerCase().includes(search.toLowerCase())
-  );
-
-  // local strage
-  useEffect(() => {
-    const localState = JSON.parse(localStorage.getItem("imgflip"));
-
-    if (!localState) {
-      setState(localState);
-    } else {
-      fetchMemes(setState);
-    }
-  }, []);
-  useEffect(() => {
-    localStorage.setItem("imgflip", JSON.stringify(state));
-  }, [state]);
-
-
-  // provider value
   const value = {
-    memes: filteredMemes,
+    memes,
     handleSearch: (str) => {
       setSearch(str);
     },
-    setSelectedMeme,
-    selectedMeme,
-    isOpen,
-    setIsOpen,
-    postedMeme,
-    setPostedMeme,
+    search,
+    savedMemes,
+    setSavedMemes,
+    error,
+    setError,
   };
-
 
   return <MemeContext.Provider value={value}>{children}</MemeContext.Provider>;
 };

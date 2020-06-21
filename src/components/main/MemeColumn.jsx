@@ -13,7 +13,7 @@ export default function MemeColumn({ memes, idx }) {
       justifyContent="center"
     >
       {memes && memes.length > 0
-        ? memes.map((meme) => <MemeBox key={meme.id} meme={meme} />)
+        ? memes.map((meme) => <MemeBox key={meme.id ? meme.id : meme._id} meme={meme} />)
         : null}
     </Box>
   );
