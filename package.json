@@ -1,6 +1,5 @@
 {
   "name": "memegen", 
-  "homepage": "https://philldev.github.io/MemeGenerator/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

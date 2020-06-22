@@ -15,7 +15,6 @@ function App() {
   return (
     <ThemeProvider>
       <CSSReset />
-
       <MemeProvider>
         <Router>
           <Nav />

@@ -4,7 +4,7 @@ export default function useLocalStorage (setState, fetchMemes, state, setSavedMe
   useEffect(() => {
     const localState = JSON.parse(localStorage.getItem("imgflip"));
 
-    if (localState.length > 0) {
+    if (localState) {
       setState(localState);
     } else {
       fetchMemes(setState);
