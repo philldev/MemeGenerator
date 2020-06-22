@@ -10,7 +10,7 @@ a:active, a:focus {
 }
 
 header {
-  padding: 15px 100px;
+  
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.5),
@@ -20,6 +20,10 @@ header {
     background-attachment: fixed;
   background-position: center;
   background-size: cover;
+}
+
+button > svg {
+  width: '100px';
 }
 
 .container {

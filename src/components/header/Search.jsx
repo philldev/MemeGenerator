@@ -11,7 +11,7 @@ export default function Search() {
   return (
     <>
       <Input
-        marginRight="1rem"
+        marginRight={{base:"6rem", md:'1rem'}}
         width="auto"
         display="block"
         placeholder="Search meme template"

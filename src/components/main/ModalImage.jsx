@@ -8,8 +8,8 @@ export default function ModalImage({ selectedMeme, postedMeme, handleSaveMeme, s
       padding="2rem 1rem"
       textAlign="center"
       flexBasis="0"
-      flexGrow="2"
-      flexShrink="2"
+      flexGrow={{base:'1',md:"2"}}
+      flexShrink={{base:'1',md:"2"}}
       backgroundColor="#1E4E8C"
       boxShadow="5px 5px #1A202C"
       marginX="1rem"

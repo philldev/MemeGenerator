@@ -1,9 +1,10 @@
-import { Box, Link, Image } from "@chakra-ui/core";
+import { Box, Image, Link } from "@chakra-ui/core";
 import React from "react";
+import Hamburger from "./Hamburger";
+import NavLinks, { links } from "./NavLinks";
 import Search from "./Search";
-import { Link as ReachLink } from "react-router-dom";
-import github from "../../assets/github-image.svg";
-import linkedIn from "../../assets/linkedin.svg";
+import SocialLinks from "./SocialLinks";
+import logo from "../../assets/logo.svg";
 
 export default function Nav() {
   return (
@@ -15,41 +16,35 @@ export default function Nav() {
       background="#232A34"
       width="100%"
       height="66px"
-      display='flex'
-      justifyContent='center'
+      display="flex"
+      justifyContent={{ base: "space-between", md: "center" }}
+      alignItems={{ base: "center", md: "" }}
+      minW='320px'
     >
       <Box
         width="975px"
-        display="flex"
+        display={{ base: "none", md: "flex" }}
         justifyContent="space-between"
         alignItems="center"
-        paddingLeft='20px'
+        paddingLeft="20px"
       >
-        <Box display="flex" as="nav">
-          <Link to="/" as={ReachLink} marginRight="1rem">
-            {" "}
-            MemeGen{" "}
-          </Link>
-          <Link marginRight="2rem"> About </Link>
-          <a href="https://github.com/philldev" target="_blank">
-            <Image marginRight="1rem" height="18px" src={github} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/deddy-wolley-b09ab312a/"
-            target="_blank"
-          >
-            <Image marginRight="2rem" height="18px" src={linkedIn} />
-          </a>
-        </Box>
-
+        <NavLinks />
         <Box display="flex" as="nav" alignItems="center">
           <Search />
-          <Link to="/user" as={ReachLink} marginRight="1rem">
-            My Memes
-          </Link>
-          <Link marginRight="1rem">Login</Link>
+          <SocialLinks />
         </Box>
       </Box>
+      <Link
+        display={{ base: "block", md: "none" }}
+        marginLeft="1rem"
+        href="/"
+      >
+        <Image src={logo} height="35px" />
+      </Link>
+      <Box display={{ base: "block", md: "none" }}>
+        <Search />
+      </Box>
+      <Hamburger />
     </Box>
   );
 }

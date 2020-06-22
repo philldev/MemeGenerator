@@ -42,6 +42,7 @@ export default function ModalForm({ selectedMeme, setPostedMeme, setSaved }) {
       boxShadow="5px 5px #1A202C"
       textAlign="center"
       as="form"
+      marginX="1rem"
       position="relative"
       onSubmit={handleSubmit(onSubmit)}
     >

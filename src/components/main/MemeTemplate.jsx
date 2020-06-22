@@ -41,7 +41,7 @@ export default function MemeTemplate() {
 
   return (
     <Box marginTop="6rem" className="container">
-      <Flex color="#fff">
+      <Flex color="#fff" flexDirection={{base:"column", md:"row"}}>
         {selectedMeme && (
           <ModalImage
             selectedMeme={selectedMeme}

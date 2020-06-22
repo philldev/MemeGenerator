@@ -13,10 +13,11 @@ export default function Header() {
       flexDir="column"
       maxH="500px"
       minH="350px"
+      padding={{base: '10px 35px', md : '15px 100px',}} 
       as="header"
     >
       <Box marginTop="50px" textAlign="center">
-        <Heading fontSize="48px" marginBottom="1rem">
+        <Heading fontSize={{base: '2xl', md:'3xl'}} marginBottom="1rem">
           Make memes, make world peace{" "}
         </Heading>
         <Text> Pick a template and make a meme!! </Text>
