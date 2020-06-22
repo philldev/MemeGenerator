@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/MemeGenerator/static/css/main.bbd86f79.chunk.css",
+    "main.js": "/MemeGenerator/static/js/main.8738cd8a.chunk.js",
+    "main.js.map": "/MemeGenerator/static/js/main.8738cd8a.chunk.js.map",
+    "runtime-main.js": "/MemeGenerator/static/js/runtime-main.cba0ae4e.js",
+    "runtime-main.js.map": "/MemeGenerator/static/js/runtime-main.cba0ae4e.js.map",
+    "static/js/2.b11dadde.chunk.js": "/MemeGenerator/static/js/2.b11dadde.chunk.js",
+    "static/js/2.b11dadde.chunk.js.map": "/MemeGenerator/static/js/2.b11dadde.chunk.js.map",
+    "index.html": "/MemeGenerator/index.html",
+    "precache-manifest.c56785d7b5dbb55dbd6ab1cbae619dbc.js": "/MemeGenerator/precache-manifest.c56785d7b5dbb55dbd6ab1cbae619dbc.js",
+    "service-worker.js": "/MemeGenerator/service-worker.js",
+    "static/css/main.bbd86f79.chunk.css.map": "/MemeGenerator/static/css/main.bbd86f79.chunk.css.map",
+    "static/js/2.b11dadde.chunk.js.LICENSE.txt": "/MemeGenerator/static/js/2.b11dadde.chunk.js.LICENSE.txt",
+    "static/media/download.png": "/MemeGenerator/static/media/download.3ee9feae.png",
+    "static/media/github-image.svg": "/MemeGenerator/static/media/github-image.192a6620.svg",
+    "static/media/jsreactnode.svg": "/MemeGenerator/static/media/jsreactnode.c136860b.svg",
+    "static/media/linkedin.svg": "/MemeGenerator/static/media/linkedin.007eb41a.svg",
+    "static/media/logo.svg": "/MemeGenerator/static/media/logo.0137b096.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cba0ae4e.js",
+    "static/js/2.b11dadde.chunk.js",
+    "static/css/main.bbd86f79.chunk.css",
+    "static/js/main.8738cd8a.chunk.js"
+  ]
+}
