@@ -1,6 +1,6 @@
 import { CSSReset, ThemeProvider } from "@chakra-ui/core";
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch, HashRouter } from "react-router-dom";
 import Dashboard from "../components/dashboard/Dashboard";
 import Error from "../components/Error";
 import Header from "../components/header/Header";
@@ -16,7 +16,7 @@ function App() {
     <ThemeProvider>
       <CSSReset />
       <MemeProvider>
-        <Router>
+        <HashRouter>
           <Nav />
           <Switch>
             <Route
@@ -33,7 +33,7 @@ function App() {
             <Route exact path="/user" render={() => <Dashboard />} />
             <Route exact path="/about" render={() => <About />} />
           </Switch>
-        </Router>
+        </HashRouter>
 
         <Error />
       </MemeProvider>
