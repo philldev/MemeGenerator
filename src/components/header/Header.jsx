@@ -13,17 +13,20 @@ export default function Header() {
       flexDir="column"
       maxH="500px"
       minH="350px"
-      padding={{base: '10px 35px', md : '15px 100px',}} 
+      padding={{ base: "10px 35px", md: "15px 100px" }}
       as="header"
     >
       <Box marginTop="50px" textAlign="center">
-        <Heading fontSize={{base: '2xl', md:'3xl'}} marginBottom="1rem">
+        <Heading fontSize={{ base: "2xl", md: "5xl" }} marginBottom="1rem">
           Make memes, make world peace{" "}
         </Heading>
         <Text> Pick a template and make a meme!! </Text>
       </Box>
       <RandomButton />
-      <Text color="#ACACAC">powered by imgflip.com</Text>
+      <Text color="#ACACAC" textAlign='center'> 
+        powered by imgflip.com <br />
+        Logo By Jonah Bethlehem, DE
+      </Text>
     </Box>
   );
 }

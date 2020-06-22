@@ -14,9 +14,7 @@ export default function ModalForm({ selectedMeme, setPostedMeme, setSaved }) {
 
   const [loading, setLoading] = React.useState(false);
 
-  const handleClose = () => {
-    setSaved(null)
-  }
+  const handleClose = () => setSaved(null)
 
   const onSubmit = (values, e) => {
     const valuesKeys = Object.keys(values);

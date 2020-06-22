@@ -1,24 +1,23 @@
 import React from "react";
-import { Flex, Box } from "@chakra-ui/core";
+import { Flex, Box, Button, Link } from "@chakra-ui/core";
 import ModalImage from "./ModalImage";
 import ModalForm from "./ModalForm";
 import { useContext } from "react";
 import { MemeContext } from "../../context/memeContext";
+import { Link as ReachLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 export default function MemeTemplate() {
   const { memes, savedMemes, setSavedMemes } = useContext(MemeContext);
   let { id } = useParams();
 
-
-  const selectedMeme =
-    savedMemes.filter((m) => m._id === id)[0]
-      ? savedMemes.filter((m) => m._id === id)[0]
-      : memes.filter((m) => m.id === id)[0];
+  const selectedMeme = savedMemes.filter((m) => m._id === id)[0]
+    ? savedMemes.filter((m) => m._id === id)[0]
+    : memes.filter((m) => m.id === id)[0];
 
   const [postedMeme, setPostedMeme] = React.useState(null);
 
-  const [saved, setSaved] = React.useState(null)
+  const [saved, setSaved] = React.useState(null);
 
   const handleSaveMeme = () => {
     // got from :
@@ -27,7 +26,7 @@ export default function MemeTemplate() {
     const name = selectedMeme.name;
     const url = postedMeme;
 
-    setSaved(true)
+    setSaved(true);
 
     const newSavedMeme = {
       _id,
@@ -41,7 +40,21 @@ export default function MemeTemplate() {
 
   return (
     <Box marginTop="6rem" className="container">
-      <Flex color="#fff" flexDirection={{base:"column", md:"row"}}>
+      <Flex color="#fff" flexDirection={{ base: "column", md: "row" }}>
+      <Link as={ReachLink} to="/user">
+        {" "}
+        <Button
+          color="#fff"
+          bg="transparent"
+          _hover={{ bg: "blue.600" }}
+          display="block"
+          position="absolute"
+          bottom="10px"
+          right="15px"
+        >
+          go back
+        </Button>{" "}
+      </Link>
         {selectedMeme && (
           <ModalImage
             selectedMeme={selectedMeme}

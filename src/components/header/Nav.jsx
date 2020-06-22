@@ -1,10 +1,10 @@
 import { Box, Image, Link } from "@chakra-ui/core";
 import React from "react";
+import logo from "../../assets/logo.svg";
 import Hamburger from "./Hamburger";
-import NavLinks, { links } from "./NavLinks";
+import NavLinks from "./NavLinks";
 import Search from "./Search";
 import SocialLinks from "./SocialLinks";
-import logo from "../../assets/logo.svg";
 
 export default function Nav() {
   return (
