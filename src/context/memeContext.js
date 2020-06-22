@@ -11,16 +11,6 @@ export const MemeProvider = ({ children }) => {
   const [error, setError] = useState(null);
   useLocalStorage(setMemes, fetchMemes, memes, setSavedMemes, savedMemes);
 
-  // selected meme state for open modal
-  // const [selectedMeme, setSelectedMeme] = useState(null);
-  // const [isOpen, setIsOpen] = useState(false);
-
-  // posted memes
-  // const [postedMeme, setPostedMeme] = useState(null);
-
-  //TODO
-  //saved memes states
-
   const value = {
     memes,
     handleSearch: (str) => {

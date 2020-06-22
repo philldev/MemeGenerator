@@ -9,9 +9,9 @@ export default function Dashboard() {
   return (
     <Box as="main" maxW='975px' mx='auto' marginTop='66px'>
       <Box display="flex" flexDir='column'>
-        {/* User profile */}
+        
         <UserProfile/>
-        {/* Memes Collection */}
+        
         <SavedMemes/>
       </Box>
     </Box>

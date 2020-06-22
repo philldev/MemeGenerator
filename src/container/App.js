@@ -13,15 +13,13 @@ import About from "../components/About/About";
 
 function App() {
   return (
-    // Theme provider
     <ThemeProvider>
       <CSSReset />
-      {/* App Provider */}
+
       <MemeProvider>
         <Router>
           <Nav />
           <Switch>
-            {/* Main */}
             <Route
               path="/"
               exact
@@ -37,7 +35,7 @@ function App() {
             <Route exact path="/about" render={() => <About />} />
           </Switch>
         </Router>
-        {/* error handler */}
+
         <Error />
       </MemeProvider>
     </ThemeProvider>

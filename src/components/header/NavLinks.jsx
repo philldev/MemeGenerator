@@ -22,7 +22,7 @@ export const links = [
 export default function NavLinks() {
   return (
     <Box display="flex" flexWrap="wrap" as="nav" alignItems="center">
-      {/* By Jonah Bethlehem, DE  */}
+      
       <Link marginRight='1rem' href="/">
         <Image src={logo} height="35px" />
       </Link>
