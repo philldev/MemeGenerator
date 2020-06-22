@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, Box, Avatar, Heading } from "@chakra-ui/core";
+import photo from "../../assets/download.png";
 
 export default function UserProfile() {
   return (
@@ -20,7 +21,7 @@ export default function UserProfile() {
           size="2xl"
           mx='auto'
           name="Segun Adebayo"
-          src="https://bit.ly/sage-adebayo"
+          src={photo}
         />
       </Box>
 

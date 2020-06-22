@@ -10,11 +10,11 @@ export const links = [
     text: "My Memes",
   },
   {
-    to: "/",
+    to: "/login",
     text: "Login",
   },
   {
-    to: "/",
+    to: "/about",
     text: "About",
   },
 ];
@@ -27,7 +27,7 @@ export default function NavLinks() {
         <Image src={logo} height="35px" />
       </Link>
       {links.map((l, idx) => (
-        <Link key={idx} to={l.to} as={ReachLink} marginRight="1rem">
+        <Link _hover={{textDecor:'none', transform:'scale(1.1)'}} key={idx} to={l.to} as={ReachLink} marginRight="1rem">
           {l.text}
         </Link>
       ))}

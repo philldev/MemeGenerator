@@ -1,6 +1,5 @@
 import { Box, Heading, Text } from "@chakra-ui/core";
 import React from "react";
-import "./header.module.css";
 import RandomButton from "./RandomButton";
 
 export default function Header() {
@@ -15,6 +14,7 @@ export default function Header() {
       minH="350px"
       padding={{ base: "10px 35px", md: "15px 100px" }}
       as="header"
+      color='#fff'
     >
       <Box marginTop="50px" textAlign="center">
         <Heading fontSize={{ base: "2xl", md: "5xl" }} marginBottom="1rem">

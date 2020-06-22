@@ -17,6 +17,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -38,7 +40,5 @@
     ]
   },
   "devDependencies": {
-    "@iconify/icons-openmoji": "^1.0.59",
-    "@iconify/react": "^1.1.3"
   }
 }

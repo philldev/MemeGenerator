@@ -9,6 +9,7 @@ import Main from "../components/main/Main";
 import MemeTemplate from "../components/main/MemeTemplate";
 import { MemeProvider } from "../context/memeContext";
 import "./App.css";
+import About from "../components/About/About";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             />
             <Route exact path="/meme/:id" render={() => <MemeTemplate />} />
             <Route exact path="/user" render={() => <Dashboard />} />
+            <Route exact path="/about" render={() => <About />} />
           </Switch>
         </Router>
         {/* error handler */}
