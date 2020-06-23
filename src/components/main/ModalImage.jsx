@@ -10,7 +10,7 @@ export default function ModalImage({ selectedMeme, postedMeme, handleSaveMeme, s
       flexBasis="0"
       flexGrow={{base:'1',md:"2"}}
       flexShrink={{base:'1',md:"2"}}
-      backgroundColor="#1E4E8C"
+      backgroundColor="#232A34"
       boxShadow="5px 5px #1A202C"
       marginX="1rem"
       paddingBottom='70px'

@@ -7,14 +7,12 @@ import postMemes from "../../utils/postMemes";
 import { useContext } from "react";
 import { MemeContext } from "../../context/memeContext";
 
-export default function ModalForm({ selectedMeme, setPostedMeme, setSaved }) {
+export default function ModalForm({ selectedMeme, setPostedMeme }) {
   const {setError} = useContext(MemeContext);
   const { register, handleSubmit, errors } = useForm();
   const boxesArr = new Array(selectedMeme.box_count).fill(0);
 
   const [loading, setLoading] = React.useState(false);
-
-  const handleClose = () => setSaved(null)
 
   const onSubmit = (values, e) => {
     const valuesKeys = Object.keys(values);
@@ -36,7 +34,7 @@ export default function ModalForm({ selectedMeme, setPostedMeme, setSaved }) {
       flexBasis="0"
       flexGrow="1"
       flexShrink="1"
-      backgroundColor="#1E4E8C"
+      backgroundColor="#232A34"
       boxShadow="5px 5px #1A202C"
       textAlign="center"
       as="form"
@@ -73,10 +71,10 @@ export default function ModalForm({ selectedMeme, setPostedMeme, setSaved }) {
 
       <Link as={ReachLink} to="/">
         {" "}
-        <Button onClick={handleClose}
+        <Button 
           color="#fff"
           bg="transparent"
-          _hover={{ bg: "blue.600" }}
+          _hover={{ transform:'translateY(-5px)' }}
           display="block"
           position="absolute"
           bottom="10px"

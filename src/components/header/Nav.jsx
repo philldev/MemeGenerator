@@ -6,7 +6,25 @@ import NavLinks from "./NavLinks";
 import Search from "./Search";
 import SocialLinks from "./SocialLinks";
 
+import github from "../../assets/github-image.svg";
+import linkedIn from "../../assets/linkedin.svg";
+
+const socialLinks = [
+  {
+    href: "https://github.com/philldev",
+    src: github,
+  },
+  {
+    href: "https://github.com/philldev",
+    src: linkedIn,
+  },
+];
+
+
 export default function Nav() {
+ 
+  
+  
   return (
     <Box
       pos="fixed"
@@ -31,7 +49,7 @@ export default function Nav() {
         <NavLinks />
         <Box display="flex" as="nav" alignItems="center">
           <Search />
-          <SocialLinks />
+          <SocialLinks links={socialLinks} />
         </Box>
       </Box>
       <Link

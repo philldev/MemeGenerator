@@ -1,27 +1,16 @@
 import React from "react";
-import { Image } from "@chakra-ui/core";
-import github from "../../assets/github-image.svg";
-import linkedIn from "../../assets/linkedin.svg";
+import { Image, Box } from "@chakra-ui/core";
 
-const links = [
-  {
-    href: "https://github.com/philldev",
-    src: github,
-  },
-  {
-    href: "https://github.com/philldev",
-    src: linkedIn,
-  },
-];
 
-export default function SocialLinks() {
+
+export default function SocialLinks({links}) {
   return (
-    <>
-      {links.map((l, idx) => (
+    <Box display='flex'>
+      {links && links.map((l, idx) => (
         <a key={idx} href={l.href}>
           <Image key={idx} marginRight="1rem" height="18px" src={l.src} />
         </a>
       ))}
-    </>
+    </Box>
   );
 }

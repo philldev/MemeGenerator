@@ -17,7 +17,7 @@ export default function Header() {
       color='#fff'
     >
       <Box marginTop="50px" textAlign="center">
-        <Heading fontSize={{ base: "2xl", md: "5xl" }} marginBottom="1rem">
+        <Heading fontFamily="ubuntu" fontSize={{ base: "2xl", md: "5xl" }} marginBottom="1rem">
           Make memes, make world peace{" "}
         </Heading>
         <Text> Pick a template and make a meme!! </Text>

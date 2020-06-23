@@ -46,7 +46,7 @@ export default function MemeTemplate() {
         <Button
           color="#fff"
           bg="transparent"
-          _hover={{ bg: "blue.600" }}
+          _hover={{ transform:'translateY(-5px)' }}
           display="block"
           position="absolute"
           bottom="10px"
@@ -68,7 +68,6 @@ export default function MemeTemplate() {
           <ModalForm
             selectedMeme={selectedMeme}
             setPostedMeme={setPostedMeme}
-            setSaved={setSaved}
           />
         )}
       </Flex>

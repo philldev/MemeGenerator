@@ -6,12 +6,12 @@ import logo from "../../assets/logo.svg";
 
 export const links = [
   {
-    to: "/user",
-    text: "My Memes",
+    to: "/",
+    text: "Home",
   },
   {
-    to: "/login",
-    text: "Login",
+    to: "/user",
+    text: "My Memes",
   },
   {
     to: "/about",
@@ -27,7 +27,7 @@ export default function NavLinks() {
         <Image src={logo} height="35px" />
       </Link>
       {links.map((l, idx) => (
-        <Link _hover={{textDecor:'none', transform:'scale(1.1)'}} key={idx} to={l.to} as={ReachLink} marginRight="1rem">
+        <Link _hover={{textDecor:'none', transform:'translateY(-5px)'}} key={idx} to={l.to} as={ReachLink} marginRight="1rem">
           {l.text}
         </Link>
       ))}
