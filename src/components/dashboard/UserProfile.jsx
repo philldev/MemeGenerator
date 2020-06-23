@@ -29,13 +29,15 @@ export default function UserProfile() {
       marginBottom="2rem"
       marginTop="2rem"
       display="flex"
+      flexDir={{base:'column', md:'row'}}
       mx="auto"
     >
-      <Box width="25%">
+      <Box width={{base:'100%', md:"25%"}}>
         <Avatar
           display="block"
           size="2xl"
           mx="auto"
+          mb={{base:'2rem', md:'0'}}
           name="Segun Adebayo"
           src={photo}
         />
